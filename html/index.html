@@ -1,0 +1,104 @@
+<!--
+███████╗███╗   ██╗███████╗ ██████╗      ██████╗ ██████╗ ██████╗ ███████╗
+██╔════╝████╗  ██║╚══███╔╝██╔═══██╗    ██╔════╝██╔═══██╗██╔══██╗██╔════╝
+█████╗  ██╔██╗ ██║  ███╔╝ ██║   ██║    ██║     ██║   ██║██║  ██║█████╗
+██╔══╝  ██║╚██╗██║ ███╔╝  ██║   ██║    ██║     ██║   ██║██║  ██║██╔══╝
+███████╗██║ ╚████║███████╗╚██████╔╝    ╚██████╗╚██████╔╝██████╔╝███████╗
+╚══════╝╚═╝  ╚═══╝╚══════╝ ╚═════╝      ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
+
+               DISCORD • https://discord.gg/HPEAWNB52w
+-->
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENZO Rental</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="interactionPrompt" class="interaction-prompt" aria-hidden="true">
+        <kbd class="prompt-key">E</kbd>
+        <span id="promptText">Press E to open ENZO Rental</span>
+    </div>
+
+    <div id="notifications" class="notifications" aria-live="polite"></div>
+    <div id="rentalTimers" class="rental-timers"></div>
+
+    <main id="menuRoot" class="menu-root" aria-hidden="true">
+        <section class="rent-window" role="dialog" aria-modal="true" aria-labelledby="menuTitle">
+            <header class="window-header">
+                <div class="brand-block">
+                    <span class="brand-bar"></span>
+                    <div>
+                        <strong id="brandName">ENZO RENTAL</strong>
+                        <p id="menuSubtitle">Choose a vehicle and rental duration.</p>
+                    </div>
+                </div>
+                <button id="closeButton" class="close-button" type="button" aria-label="Close">×</button>
+            </header>
+
+            <div class="window-body">
+                <section class="fleet-panel">
+                    <div class="fleet-head">
+                        <div>
+                            <h1 id="menuTitle">Rent a vehicle</h1>
+                            <span id="vehicleCount" class="vehicle-count"></span>
+                        </div>
+                        <div id="categoryFilters" class="category-filters" aria-label="Vehicle categories"></div>
+                    </div>
+
+                    <div id="vehicleGrid" class="vehicle-list"></div>
+                    <p id="emptyState" class="empty-state">No vehicles are available in this category.</p>
+                </section>
+
+                <aside class="booking-panel">
+                    <div class="selection-block">
+                        <span id="selectedVehicleLabel" class="label">Selected vehicle</span>
+                        <h2 id="selectedVehicleValue">Not selected</h2>
+                        <span id="selectedCategory" class="selected-category">—</span>
+                        <p id="selectedVehicleDescription">Choose a vehicle from the list.</p>
+
+                        <div class="selection-stats">
+                            <div>
+                                <span id="priceRateLabel">Price rate</span>
+                                <strong id="selectedVehicleRate">—</strong>
+                            </div>
+                            <div>
+                                <span id="seatsLabel">Seats</span>
+                                <strong id="selectedVehicleSeats">—</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="duration-block">
+                        <div class="block-title">
+                            <span id="durationLabel">Rental duration</span>
+                            <strong id="selectedDurationValue">Not selected</strong>
+                        </div>
+                        <div id="timeOptions" class="time-options"></div>
+                    </div>
+
+                    <div class="checkout-block">
+                        <div class="total-row">
+                            <span id="totalLabel">Total price</span>
+                            <strong id="totalPrice">$0</strong>
+                        </div>
+                        <button id="rentButton" class="rent-button" type="button" disabled>
+                            <span id="rentButtonText">Rent vehicle</span>
+                        </button>
+                        <p id="paymentHint" class="payment-hint">Payment account is selected automatically.</p>
+                    </div>
+
+                    <footer class="panel-footer">
+                        <strong id="creditText">ENZO CODE</strong>
+                        <span id="discordText">discord.gg/HPEAWNB52w</span>
+                    </footer>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
