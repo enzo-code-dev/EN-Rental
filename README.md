@@ -9,7 +9,7 @@
                DISCORD • https://discord.gg/HPEAWNB52w
 ```
 ![EN-Rental Preview](images/preview.png)
-# ENZO CODE - Vehicle Rental 4.1.1
+# ENZO CODE - Vehicle Rental
 
 **Creator: ENZO CODE**
 
